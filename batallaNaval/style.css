@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.celda {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    border: 1px solid navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.barco {
+    background-color: gray;
+}
+
+.tocado {
+    background-color: red;
+}
+
+.agua {
+    background-color: white;
+}
+
+#reiniciar {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+#reiniciar:hover {
+    background-color: #218838;
+    transform: translate(-50%, -50%) scale(1.1);
+}

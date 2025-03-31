@@ -1,0 +1,16 @@
+body{
+    padding: 200px;
+}
+.caja {
+    text-align: center;
+}
+
+#numeros {
+    font-size: 100px;   
+}
+#ganaste {
+    color: green;
+}
+#perdiste{
+    color: red;
+}
