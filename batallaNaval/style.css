@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+}
+h1 {
+    margin: 32px;
+    text-align: center;
+}
+h3 {
+    font-size: 2rem;
+}
+p {
+    font-size: 2rem;
+}
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    justify-content: center;
+}
+
+.celda {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#estadistica{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+#hundidos {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+    #estadistica{
+        display: block;
+    }
+    #tablero {
+        display: grid;
+        grid-template-columns: repeat(10, 37px);
+        grid-template-rows: repeat(10, 37px);
+        justify-content: center;
+    }
+    
+    .celda {
+        width: 37px;
+        height: 37px;
+        background-color: gray;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #hundidos {
+        display: flex;
+        gap: 2rem;
+    }
+    #disparos {
+        display: flex;
+        gap: 2rem;
+    }
+  }
+.barco {
+    background-color: gray;
+}
+
+.tocado {
+    background-color: red;
+}
+
+.agua {
+    background-color: aqua;
+}
+
+#tocadoCartel, #aguaCartel, #hundidoCartel {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: fadeInOut 2s ease-in-out;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* Estilos específicos */
+#tocadoCartel {
+    background-color: crimson;
+}
+
+#aguaCartel {
+    background-color: deepskyblue;
+}
+
+#hundidoCartel {
+    background-color: #222;
+    color: gold;
+}
+
+/* Animación para mostrar y ocultar */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    10% { opacity: 1; transform: translate(-50%, -50%); }
+    90% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+}
+
+@media only screen and (max-width: 600px) {
+    #tocadoCartel, #aguaCartel, #hundidoCartel {
+        top: 80%;
+        left: 50%;
+        
+    }
+  }
+  #reiniciar, #perdiste, #ganaste {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    display: none;
+    z-index: 999;
+}
+
+/* Botón de reiniciar */
+#reiniciar {
+    top: 60%;
+    left: 50%;
+    background-color: #28a745;
+}
+
+#reiniciar:hover {
+    background-color: #218838;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Cartel de perdiste */
+#perdiste {
+    top: 30%;
+    left: 50%;
+    background-color: crimson;
+    animation: fadeInOut 2.5s ease-in-out;
+}
+
+/* Cartel de ganaste */
+#ganaste {
+    top: 30%;
+    left: 50%;
+    background-color: green;
+    color: white;
+    animation: fadeInOut 2.5s ease-in-out;
+}
+
+/* Reutilizamos la animación */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    10% { opacity: 1; transform: translate(-50%, -50%); }
+    90% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -40%); }
+}
+
+
+#encabezado {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
